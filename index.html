@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Seed Code Chat — v2.1.0 | AI Assistant for Coding &amp; Beyond</title>
+  <meta name="description" content="Seed Code Chat is a modern AI assistant for chat, coding, learning, image generation, image understanding, and voice interaction. Download the v2.1.0 Android APK today." />
+  <meta name="author" content="Al Shahriar Sowan" />
+  <meta name="publisher" content="Eagox Studio" />
+  <link rel="author" href="https://alshahriarsayon.vercel.app/" />
+  <meta name="keywords" content="Seed Code Chat, AI assistant, image generation, image recognition, voice input, text to speech, coding assistant, Android app" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://seedcode-app.vercel.app/" />
+  <meta name="theme-color" content="#09090B" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Seed Code Chat" />
+  <meta property="og:title" content="Seed Code Chat — v2.1.0 | AI Assistant for Coding &amp; Beyond" />
+  <meta property="og:description" content="Chat, create images, understand images, and talk with your AI — all from one app. Download Seed Code Chat v2.1.0 for Android." />
+  <meta property="og:url" content="https://seedcode-app.vercel.app/" />
+  <meta property="og:image" content="https://seedcode-app.vercel.app/assets/og-image.png" />
+  <meta property="og:image:alt" content="Seed Code Chat — AI Assistant for Coding &amp; Beyond" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@seedcode" />
+  <meta name="twitter:title" content="Seed Code Chat — v2.1.0 | AI Assistant for Coding &amp; Beyond" />
+  <meta name="twitter:description" content="Chat, create images, understand images, and talk with your AI — all from one app. Download Seed Code Chat v2.1.0 for Android." />
+  <meta name="twitter:image" content="https://seedcode-app.vercel.app/assets/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://seedcode-app.vercel.app/#website",
+        "url": "https://seedcode-app.vercel.app/",
+        "name": "Seed Code Chat",
+        "description": "Seed Code Chat is an AI-powered Android assistant — chat, image generation, image understanding, voice input, voice output, and coding help.",
+        "publisher": { "@id": "https://seedcode-app.vercel.app/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://seedcode-app.vercel.app/#software",
+        "name": "Seed Code Chat",
+        "url": "https://seedcode-app.vercel.app/",
+        "description": "A modern AI assistant for chat, coding, learning, image generation, image understanding, and voice interaction.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Android",
+        "softwareVersion": "2.1.0",
+        "image": "https://seedcode-app.vercel.app/assets/icon.png",
+        "downloadUrl": "https://github.com/Alshahriar-07/seedcode-chat/releases/download/v2.1.0/seedcode-chat-latest.apk",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Al Shahriar Sowan",
+          "url": "https://alshahriarsayon.vercel.app/"
+        },
+        "publisher": { "@id": "https://seedcode-app.vercel.app/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://seedcode-app.vercel.app/#organization",
+        "name": "Eagox Studio",
+        "description": "The studio behind the Seed Code ecosystem — Seed Code Chat for the web and Android, and Seed Code CLI for the terminal."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: paint with system fallback, then swap (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  </noscript>
+
+  <link rel="preload" as="image" href="assets/icon.png" fetchpriority="high" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav-wrap" id="nav-wrap">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="logo" aria-label="Seed Code Chat — home">
+        <img src="assets/icon.png" alt="" class="logo-img" width="26" height="26" />
+        Seed&nbsp;Code&nbsp;<span class="logo-accent">Chat</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#whats-new">What's new</a></li>
+        <li class="nav-cta">
+          <a href="https://github.com/Alshahriar-07/seedcode-chat/releases/download/v2.1.0/seedcode-chat-latest.apk" class="btn btn-primary">Download APK</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" aria-label="Seed Code Chat v2.1.0">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge badge-accent reveal"><span class="badge-dot" aria-hidden="true"></span>v2.1.0 — Now with image and voice features</span>
+          <h1 class="reveal">Your AI. Now More Capable.</h1>
+          <p class="hero-sub reveal">
+            Chat, create images, understand images, and talk with your AI — all from one simple app.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="https://github.com/Alshahriar-07/seedcode-chat/releases/download/v2.1.0/seedcode-chat-latest.apk" class="btn btn-primary btn-lg" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Download for Android
+            </a>
+            <a href="https://seedcode-chat.vercel.app/" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+              Open Web App
+            </a>
+          </div>
+          <p class="hero-note reveal">
+            <span class="dot" aria-hidden="true"></span> Android APK &bull; Version 2.1.0
+          </p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="phone" role="img" aria-label="Preview of the Seed Code Chat Android app showing an AI chat conversation">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-status" aria-hidden="true">
+                  <span class="phone-time">9:41</span>
+                  <span class="phone-icons">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="7" y="4" width="10" height="16" rx="2.4"/><path d="M11 18.5h2"/></svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><path d="M12 18.5h.01"/></svg>
+                  </span>
+                </div>
+                <div class="phone-header">
+                  <img src="assets/icon.png" alt="" width="30" height="30" />
+                  <div class="phone-header-text">
+                    <strong>Seed Code Chat</strong>
+                    <span>AI Assistant</span>
+                  </div>
+                  <svg class="phone-more" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="19" cy="12" r="1.4" fill="currentColor"/></svg>
+                </div>
+                <div class="phone-chat" aria-hidden="true">
+                  <div class="bubble bubble-you">Explain closures in JavaScript</div>
+                  <div class="bubble bubble-ai">A closure is a function that keeps access to variables from the scope where it was created.</div>
+                  <div class="bubble bubble-ai">Here is a working example — want me to break it down?</div>
+                  <div class="bubble bubble-you">Now generate a matching illustration for it</div>
+                  <div class="bubble bubble-ai">Here is a simple scene built from your idea:</div>
+                  <div class="phone-code">
+                    <span class="phone-code-line"><span class="tok-k">const</span> <span class="tok-f">scene</span> = {</span>
+                    <span class="phone-code-line">  sun: <span class="tok-k">true</span>,</span>
+                    <span class="phone-code-line">  sky: <span class="tok-n">"blue"</span>,</span>
+                    <span class="phone-code-line">  subject: <span class="tok-s">"growing sprout"</span>,</span>
+                    <span class="phone-code-line">  mood: <span class="tok-s">"calm"</span>,</span>
+                    <span class="phone-code-line">};</span>
+                  </div>
+                </div>
+                <div class="phone-composer">
+                  <span class="phone-input">Ask anything&hellip;</span>
+                  <span class="phone-send" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Feature cards ============ -->
+    <section class="section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">v2.1.0 capabilities</span>
+          <h2 id="features-heading" class="reveal">One AI app, now with image &amp; voice</h2>
+          <p class="reveal">Seed Code Chat v2.1.0 adds image generation and understanding, plus full voice input and voice output — alongside the normal chat and coding experience.</p>
+        </div>
+
+        <div class="feature-grid">
+          <!-- Image generation -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M5 15c0-3 2-5 5-5s5 2 5 5"/></svg>
+            </div>
+            <h3>AI Image Generation</h3>
+            <p>Generate images from a natural-language prompt — turn a sentence into a custom picture.</p>
+          </article>
+
+          <!-- Image recognition -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M5 15c0-3 2-5 5-5s5 2 5 5"/><circle cx="15.5" cy="15.5" r="1.6"/><path d="M12 8v4" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3>Image Recognition</h3>
+            <p>Upload a photo or screenshot and let the AI understand it — great for reading diagrams, documents, and visual content.</p>
+          </article>
+
+          <!-- Voice input -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+            </div>
+            <h3>Voice Input</h3>
+            <p>Speak naturally instead of typing — your voice is converted to text and sent into the chat.</p>
+          </article>
+
+          <!-- Voice output -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4"/></svg>
+            </div>
+            <h3>AI Voice Output</h3>
+            <p>Have the AI read its answers aloud — text-to-speech so you can listen instead of read.</p>
+          </article>
+
+          <!-- Normal AI chat -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
+            </div>
+            <h3>Fast AI Chat</h3>
+            <p>A clean, normal conversational AI experience — quick to open, quick to answer.</p>
+          </article>
+
+          <!-- Coding -->
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
+            </div>
+            <h3>Coding &amp; Learning</h3>
+            <p>For coding, explanations, research, learning, writing, and everyday questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Download ============ -->
+    <section class="section section-alt" id="download" aria-labelledby="download-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Get the app</span>
+          <h2 id="download-heading" class="reveal">Download Seed Code Chat v2.1.0</h2>
+          <p class="reveal">Take your AI assistant with you. Install the v2.1.0 APK on any compatible Android device.</p>
+        </div>
+
+        <div class="download-card reveal">
+          <img src="assets/icon.png" alt="" class="download-logo" width="72" height="72" />
+          <div class="download-info">
+            <h3>Seed Code Chat</h3>
+            <p class="download-meta">Version 2.1.0 &bull; Android APK</p>
+            <p class="download-desc">A modern AI assistant for chat, coding, learning, image generation, image understanding, and voice interaction.</p>
+          </div>
+          <div class="download-actions">
+            <a href="https://github.com/Alshahriar-07/seedcode-chat/releases/download/v2.1.0/seedcode-chat-latest.apk" class="btn btn-primary btn-lg btn-block" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Download APK
+            </a>
+            <p class="download-note">APK download &bull; Android &bull; v2.1.0</p>
+          </div>
+        </div>
+
+        <div class="split split-web">
+          <div class="split-copy">
+            <span class="eyebrow reveal">Seed Code Chat Web</span>
+            <h2 id="web-heading" class="reveal">Can't install? Use the web app.</h2>
+            <p class="reveal">Use Seed Code Chat directly from your browser without installing anything. Ask questions, write and refine code, and get intelligent AI answers wherever you are.</p>
+            <div class="reveal">
+              <a href="https://seedcode-chat.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener">Open Seed Code Chat Web</a>
+            </div>
+          </div>
+          <div class="split-visual reveal">
+            <div class="web-card">
+              <div class="web-card-bar">
+                <span class="web-card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>seedcode-chat.vercel.app</span>
+              </div>
+              <div class="web-card-body">
+                <div class="web-row">
+                  <span class="web-you" aria-hidden="true">you &rsaquo;</span>
+                  <span>Explain closures in JavaScript</span>
+                </div>
+                <div class="web-row web-ai">
+                  <span class="web-seed" aria-hidden="true">seedcode &rsaquo;</span>
+                  <span>A closure is a function that keeps access to variables from the scope where it was created.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ What's New in v2.1.0 ============ -->
+    <section class="section" id="whats-new" aria-labelledby="whats-new-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Release notes</span>
+          <h2 id="whats-new-heading" class="reveal">What's new in v2.1.0</h2>
+          <p class="reveal">This is a major feature update. Here is what's included in this release.</p>
+        </div>
+
+        <div class="whats-new-grid">
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">1</span>
+            <h3 class="whats-new-title">AI Image Generation</h3>
+            <p class="whats-new-body">Generate images from natural-language prompts, now a first-class AI capability.</p>
+          </div>
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">2</span>
+            <h3 class="whats-new-title">Image Recognition</h3>
+            <p class="whats-new-body">Upload an image and have the AI understand its contents — screenshots, photos, diagrams, and documents.</p>
+          </div>
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">3</span>
+            <h3 class="whats-new-title">Voice Input</h3>
+            <p class="whats-new-body">Speak naturally instead of typing; voice is converted into text and sent into the chat.</p>
+          </div>
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">4</span>
+            <h3 class="whats-new-title">AI Voice Output</h3>
+            <p class="whats-new-body">AI responses can be spoken aloud using text-to-speech.</p>
+          </div>
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">5</span>
+            <h3 class="whats-new-title">Improved AI interaction</h3>
+            <p class="whats-new-body">A more capable, polished conversation layer across chat, image, and voice.</p>
+          </div>
+          <div class="whats-new-item reveal">
+            <span class="whats-new-mark" aria-hidden="true">6</span>
+            <h3 class="whats-new-title">Improved overall chat experience</h3>
+            <p class="whats-new-body">Cleaner chat, faster responses, and a more complete assistant for coding and everyday use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Seed Code CLI ============ -->
+    <section class="section section-cli" id="cli" aria-labelledby="cli-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Seed Code CLI</span>
+          <h2 id="cli-heading" class="reveal">The AI coding assistant, inside your terminal</h2>
+          <p class="reveal">Seed Code CLI is the developer-focused command-line companion in the Seed Code ecosystem.</p>
+        </div>
+
+        <div class="cli-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M6.5 17l4-5.5M17.5 17l-4-5.5"/></svg>
+            </div>
+            <h3>Five Independent Providers</h3>
+            <p>OpenRouter, FreeModel Claude &amp; Codex, AeroLink, or fully local and private with Ollama. Switch with <code>/provider</code>.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
+            </div>
+            <h3>Code Mode</h3>
+            <p>Project-aware coding inside your IDE workflow — edit code, run development workflows, and get AI-assisted programming from the terminal.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+            <h3>Streaming Responses</h3>
+            <p>Tokens render the instant they arrive — with live Markdown and syntax-highlighted code.</p>
+          </article>
+        </div>
+
+        <div class="cli-cta reveal">
+          <a href="https://seedcode-web.vercel.app/" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">Explore Seed Code CLI</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Ecosystem ============ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-card reveal">
+          <span class="eyebrow">Built with Seed Code</span>
+          <h2 id="about-heading">One ecosystem. Every way you work.</h2>
+          <p>
+            Seed Code Chat brings AI-powered assistance to the web and Android,
+            while Seed Code CLI focuses on developer workflows from the terminal.
+            Same identity, same polish — built to fit how you like to work.
+          </p>
+          <div class="about-links">
+            <a href="#download" class="link-arrow">Seed Code Chat (Android) <span aria-hidden="true">&rarr;</span></a>
+            <a href="https://seedcode-chat.vercel.app/" class="link-arrow" target="_blank" rel="noopener">Seed Code Chat (Web) <span aria-hidden="true">&rarr;</span></a>
+            <a href="https://seedcode-web.vercel.app/" class="link-arrow" target="_blank" rel="noopener">Seed Code CLI <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Creator ============ -->
+    <section class="section" id="creator" aria-labelledby="creator-heading">
+      <div class="container">
+        <div class="creator-card reveal">
+          <span class="eyebrow">About the Creator</span>
+          <h2 id="creator-heading">Al Shahriar Sowan</h2>
+          <p class="creator-role">Founder, Eagox Studio</p>
+          <p>
+            Seed Code is designed and developed by Eagox Studio, created by
+            <a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener">Al Shahriar Sowan</a>.
+            The Seed Code ecosystem — Seed Code Chat for web and Android, and Seed Code CLI for the
+            terminal — is an independent, open project built for developers.
+          </p>
+          <div class="creator-links">
+            <a href="https://alshahriarsayon.vercel.app/" class="btn btn-secondary" target="_blank" rel="noopener">Personal Website</a>
+            <a href="https://github.com/Alshahriar-07/seedcode-cli" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Final CTA ============ -->
+    <section class="section section-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta reveal">
+          <h2 id="cta-heading">Your AI assistant, in your pocket.</h2>
+          <p>Download Seed Code Chat for Android and take AI with you.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/Alshahriar-07/seedcode-chat/releases/download/v2.1.0/seedcode-chat-latest.apk" class="btn btn-primary btn-lg" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Download Seed Code Chat
+            </a>
+          </div>
+          <p class="cta-note">Android APK &bull; Version 2.1.0</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="Seed Code — back to top">
+          <img src="assets/icon.png" alt="" class="logo-img" width="26" height="26" />
+          Seed&nbsp;Code
+        </a>
+        <p class="footer-tag">The Seed Code ecosystem — AI assistance on Android, in your browser, and in your terminal.</p>
+        <p class="footer-credit">Designed &amp; Developed by <strong>Eagox Studio</strong><br />
+          Created by <a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener">Al Shahriar Sowan</a></p>
+      </div>
+      <nav aria-label="Seed Code">
+        <h4>Seed Code</h4>
+        <a href="#download">Seed Code Chat</a>
+        <a href="https://seedcode-chat.vercel.app/" target="_blank" rel="noopener">Seed Code Chat Web</a>
+        <a href="https://seedcode-web.vercel.app/" target="_blank" rel="noopener">Seed Code CLI</a>
+        <a href="#creator">Creator</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Seed Code</p>
+      <p><a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
